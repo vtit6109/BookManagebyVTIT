@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register src="Layouts/Banner.ascx" tagname="Banner" tagprefix="uc1" %>
+<%@ Register src="Layouts/footer.ascx" tagname="footer" tagprefix="uc2" %>
+
+<%@ Register src="Navigation/Chudesach.ascx" tagname="Chudesach1" tagprefix="uc3" %>
+<%@ Register src="Navigation/Nhaxuatban.ascx" tagname="Nhaxuatban" tagprefix="uc4" %>
+
+<%@ Register src="Conponents/Sachmoi.ascx" tagname="Sachmoi" tagprefix="uc5" %>
+
+<%@ Register src="Layouts/menu.ascx" tagname="menu" tagprefix="uc6" %>
+
+<%@ Register src="Layouts/Giohang.ascx" tagname="Giohang" tagprefix="uc7" %>
+
+<%@ Register src="Conponents/Chitietsach.ascx" tagname="Chitietsach" tagprefix="uc8" %>
+
+<%@ Register src="Ads/Ads1.ascx" tagname="Ads1" tagprefix="uc10" %>
+
+<%@ Register src="Conponents/Sachbanchay.ascx" tagname="Sachbanchay" tagprefix="uc9" %>
+
+<%@ Register src="Layouts/TTGiohang.ascx" tagname="TTGiohang" tagprefix="uc11" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .left{
+            width:20%;
+            vertical-align:top;
+        }
+        .right{
+            width:20%;
+            vertical-align:top;
+        }
+        .center{
+            width:60%;
+            vertical-align:top;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <table class="auto-style1">
+                <tr>
+                    <td colspan="3" class="auto-style4">
+                        <uc1:Banner ID="Banner1" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style1" colspan="3">
+                        <uc6:menu ID="menu1" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                            <uc3:Chudesach1 ID="Chudesach11" runat="server" />
+                            <uc4:Nhaxuatban ID="Nhaxuatban1" runat="server" />
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td class="center">
+                        <asp:Panel ID="Panel1" runat="server" ScrollBars="Vertical" style="text-align: center">
+                            <div class="auto-style6">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder7" runat="server">
+                                    <uc5:Sachmoi ID="Sachmoi1" runat="server" />
+                                    &nbsp;
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </asp:Panel>
+                    </td>
+                    <td class="right">
+                        <uc11:TTGiohang ID="TTGiohang1" runat="server" />
+                        <br />
+                        <asp:Panel ID="Panel2" runat="server" ScrollBars="Vertical" Height="470px">
+                            <uc10:Ads1 ID="Ads11" runat="server" />
+                        </asp:Panel>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        &nbsp;</td>
+                    <td class="center">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder8" runat="server">
+                            <uc9:Sachbanchay ID="Sachbanchay1" runat="server" />
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td class="right">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <uc2:footer ID="footer1" runat="server" />
+                    </td>
+                </tr>
+            </table>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
+

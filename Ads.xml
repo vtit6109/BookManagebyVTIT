@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>Images\facebook.jpg</ImageUrl>
+    <NavigateUrl>https://www.facebook.com</NavigateUrl>
+    <AlternateText>
+      Facebook
+    </AlternateText>
+    <Keyword>Facebook</Keyword>
+    <Impressions>30</Impressions>
+  </Ad>
+<Ad>
+    <ImageUrl>Images\twitch.png</ImageUrl>
+    <NavigateUrl>https://www.google.com</NavigateUrl>
+    <AlternateText>
+      Twitch
+    </AlternateText>
+    <Keyword>Twitch</Keyword>
+    <Impressions>30</Impressions>
+  </Ad>
+<Ad>
+    <ImageUrl>Images\twitter.png</ImageUrl>
+    <NavigateUrl>https://www.google.com</NavigateUrl>
+    <AlternateText>
+      Twitter
+    </AlternateText>
+    <Keyword>Twitter</Keyword>
+    <Impressions>40</Impressions>
+  </Ad>
+</Advertisements>
